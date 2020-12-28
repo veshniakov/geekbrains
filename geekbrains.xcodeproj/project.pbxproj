@@ -8,7 +8,7 @@
 
 /* Begin PBXFileReference section */
 		42B9C8B1259A0109003B4E0C /* L1_HW1.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L1_HW1.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		42B9C8B3259A02AC003B4E0C /* L2_HW2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L2_HW2.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		42B9C8B3259A02AC003B4E0C /* L2_HW2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = L2_HW2.playground; path = HomeWorks/L2_HW2.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */

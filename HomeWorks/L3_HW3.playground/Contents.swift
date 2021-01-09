@@ -52,9 +52,13 @@ struct carSetup {
 }
 
 var sportCar = carSetup(vendor: .BMW, yearMake: 2020, capacity: 200.0, filledCapacity: 0, egineStatus: .stop, windowsStatus: .close)
-var trunkCar = carSetup(vendor: .Volvo, yearMake: 1999, capacity: 2000, filledCapacity: 0, egineStatus: .start, windowsStatus: .open)
+var trunkCar = carSetup(vendor: .Volvo, yearMake: 1999, capacity: 2000, filledCapacity: 1500, egineStatus: .start, windowsStatus: .open)
 
 sportCar.changeEngineStatus(action: .start)
 sportCar.changeFilledCapacity(action: .load, volume: 50)
 sportCar.changeWindowsStatus(action: .open)
 print("Автомобиль \(sportCar.egineStatus.rawValue), окна \(sportCar.windowsStatus.rawValue), в багажнике автомобиля \(sportCar.filledCapacity) кг. из \(sportCar.capacity)")
+trunkCar.changeEngineStatus(action: .stop)
+trunkCar.changeFilledCapacity(action: .unload, volume: 322)
+trunkCar.changeWindowsStatus(action: .close)
+print("Автомобиль \(trunkCar.egineStatus.rawValue), окна \(trunkCar.windowsStatus.rawValue), в кузове автомобиля \(trunkCar.filledCapacity) кг. из \(trunkCar.capacity)")

@@ -13,6 +13,14 @@ enum Windows: String {
 enum EngineType {
     case Diesel, Gasoline
 }
+enum BackState: String {
+    case up = "кузов опрокинут"
+    case down = "кузов опущен"
+}
+enum SportMode {
+    case standart, sport
+}
+
 
 class Car{
     let vendor: Vendor
@@ -47,5 +55,39 @@ class Car{
         self.enginePower = enginePower
         self.egineStatus = egineStatus
         self.windowsStatus = windowsStatus
+    }
+}
+
+class TrunkCar: Car{
+    var backState = BackState
+    init(vendor: Vendor, yearMake: Int, engineType: EngineType, enginePower: Int, egineStatus: Engine, windowsStatus: Windows, backState: BackState){
+        self.backState = backState
+    }
+    super.init(vendor: Vendor, yearMake: Int, engineType: EngineType, enginePower: Int, egineStatus: Engine, windowsStatus: Windows)
+    
+    func changeBackState(action: BackState){
+        switch action {
+        case BackState.up:
+            self.backState = .up
+        default:
+            self.backState = .down
+        }
+    }
+}
+
+class SportCar: Car {
+    var transsmissionMode = SportMode
+    init(vendor: Vendor, yearMake: Int, engineType: EngineType, enginePower: Int, egineStatus: Engine, windowsStatus: Windows, transsmissionMode: SportMode ) {
+        self.transsmissionMode = transsmissionMode
+    }
+    super.init(vendor: Vendor, yearMake: Int, engineType: EngineType, enginePower: Int, egineStatus: Engine, windowsStatus: Windows)
+    
+    func changeTranssmissionMode(mode: SportMode){
+        switch mode {
+        case SportMode.standart:
+            self.SportMode = .standart
+        default:
+            self.SportMode = .sport
+        }
     }
 }

@@ -71,7 +71,7 @@ class SportCar: Car, ConsolePrintable {
     var windowsStatus: Windows
     var transsmissionMode: SportMode
     var description: String {
-        return String(describing: "Марка автомобиля: \(bmwM6.vendor)\nГод выпуска: \(bmwM6.yearMake)\nТип двигателя: \(bmwM6.engineType.rawValue)\nМощность двигателя: \(bmwM6.enginePower) л.с.\nСостояние: окна \(bmwM6.windowsStatus.rawValue) | двигатель: \(bmwM6.egineStatus.rawValue) | режим КПП: \(bmwM6.transsmissionMode.rawValue)\n______________\n")
+        return String(describing: "Марка автомобиля: \(vendor)\nГод выпуска: \(yearMake)\nТип двигателя: \(engineType.rawValue)\nМощность двигателя: \(enginePower) л.с.\nСостояние: окна \(windowsStatus.rawValue) | двигатель: \(egineStatus.rawValue) | режим КПП: \(transsmissionMode.rawValue)\n______________\n")
         }
     init(vendor: Vendor, yearMake: Int, engineType: EngineType, enginePower: Int, egineStatus: Engine, windowsStatus: Windows, transsmissionMode: SportMode ){
         self.vendor = vendor
